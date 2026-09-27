@@ -1,0 +1,90 @@
+{
+  "generated_vs_project2": [
+    {
+      "exact_smiles_overlap": 0,
+      "fraction_cross_set_tanimoto_ge_0_5": 0.0,
+      "fraction_cross_set_tanimoto_ge_0_7": 0.0,
+      "max_cross_set_tanimoto": 0.3380281690140845,
+      "n_query": 113,
+      "n_reference": 20,
+      "nearest_cross_set_tanimoto_median": 0.18556701030927836,
+      "query_group": "generated_survivors",
+      "reference_group": "project2_interesting_top20"
+    },
+    {
+      "exact_smiles_overlap": 0,
+      "fraction_cross_set_tanimoto_ge_0_5": 0.0,
+      "fraction_cross_set_tanimoto_ge_0_7": 0.0,
+      "max_cross_set_tanimoto": 0.4722222222222222,
+      "n_query": 113,
+      "n_reference": 50,
+      "nearest_cross_set_tanimoto_median": 0.21153846153846154,
+      "query_group": "generated_survivors",
+      "reference_group": "project2_filtered_top50"
+    },
+    {
+      "exact_smiles_overlap": 0,
+      "fraction_cross_set_tanimoto_ge_0_5": 0.0,
+      "fraction_cross_set_tanimoto_ge_0_7": 0.0,
+      "max_cross_set_tanimoto": 0.4074074074074074,
+      "n_query": 113,
+      "n_reference": 1000,
+      "nearest_cross_set_tanimoto_median": 0.25,
+      "query_group": "generated_survivors",
+      "reference_group": "project2_random_library"
+    }
+  ],
+  "group_summary": [
+    {
+      "clogp_median": 3.5992200000000008,
+      "fraction_training_tanimoto_ge_0_7": 0.0,
+      "fraction_training_tanimoto_lt_0_5": 1.0,
+      "group": "generated_survivors",
+      "mean_pairwise_tanimoto": 0.1294698108905048,
+      "mw_median": 410.2750000000001,
+      "n": 113,
+      "nearest_training_tanimoto_median": 0.3673469387755102,
+      "qed_median": 0.6104447808222927
+    },
+    {
+      "clogp_median": 4.691300000000004,
+      "fraction_training_tanimoto_ge_0_7": 0.0,
+      "fraction_training_tanimoto_lt_0_5": 1.0,
+      "group": "project2_interesting_top20",
+      "mean_pairwise_tanimoto": 0.1976155674753851,
+      "mw_median": 411.94200000000023,
+      "n": 20,
+      "nearest_training_tanimoto_median": 0.34294871794871795,
+      "qed_median": 0.5623237789480127
+    },
+    {
+      "clogp_median": 4.395250000000004,
+      "fraction_training_tanimoto_ge_0_7": 0.22,
+      "fraction_training_tanimoto_lt_0_5": 0.42,
+      "group": "project2_filtered_top50",
+      "mean_pairwise_tanimoto": 0.17168952388587355,
+      "mw_median": 388.41750000000013,
+      "n": 50,
+      "nearest_training_tanimoto_median": 0.5785543608124253,
+      "qed_median": 0.49004093134542015
+    },
+    {
+      "clogp_median": 3.2816000000000014,
+      "fraction_training_tanimoto_ge_0_7": 0.001,
+      "fraction_training_tanimoto_lt_0_5": 0.994,
+      "group": "project2_random_library",
+      "mean_pairwise_tanimoto": 0.10566789899667171,
+      "mw_median": 376.35900000000004,
+      "n": 1000,
+      "nearest_training_tanimoto_median": 0.24859550561797752,
+      "qed_median": 0.5400308817464834
+    }
+  ],
+  "inputs": {
+    "generated_survivors": "/Users/joykarmakar/Documents/GitHub/egfr-constrained-molgen/results/lists/survivors.csv",
+    "project2_external_library": "/Users/joykarmakar/Documents/GitHub/egfr-virtual-screen/data/raw/screening_library.smi",
+    "project2_filtered_top50": "/Users/joykarmakar/Documents/GitHub/egfr-virtual-screen/results/lists/top50_filtered.csv",
+    "project2_interesting_top20": "/Users/joykarmakar/Documents/GitHub/egfr-virtual-screen/results/lists/top20_interesting.csv"
+  },
+  "selection_note": "Project 3 generated survivors are frozen before this comparison. The Project 2 random comparator is sampled deterministically from the frozen external library after Project 2 benchmark exact-match removal; EGFR activity/model scores are not used to choose it."
+}

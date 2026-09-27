@@ -1,0 +1,18 @@
+{
+  "best_epoch": 47,
+  "best_validation_token_loss": 0.3415466687694099,
+  "checkpoint": "/Users/joykarmakar/Documents/GitHub/egfr-constrained-molgen/results/generator.pt",
+  "checkpoint_sha256": "3e363a82ac29e307311d3675d5c2bfebe82baac3e115f0638fa76dbe81873dbb",
+  "demo_mode": false,
+  "elapsed_seconds": 609.4282710552216,
+  "epochs_ran": 50,
+  "n_total_smiles": 6279,
+  "n_train_smiles": 5651,
+  "n_validation_smiles": 628,
+  "seed": 2026,
+  "training_file": "/Users/joykarmakar/Documents/GitHub/egfr-constrained-molgen/data/processed/generation_training_actives.csv",
+  "training_file_sha256": "c444568de0d35881a4651892dd521077a0f256a2e69152cda1158fcacd4686c8",
+  "training_manifest": "/Users/joykarmakar/Documents/GitHub/egfr-constrained-molgen/data/processed/generation_training_manifest.json",
+  "training_manifest_sha256": "0094af25f2dc140bd886253ccbd0f3680f2d0c2a193cd5b5e2bce4866e40dc5e",
+  "vocab_size": 39
+}

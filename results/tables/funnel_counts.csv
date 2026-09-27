@@ -1,0 +1,12 @@
+stage,count
+sampled_raw,10000
+step1_valid_parse_sanitize,6528
+step2_parent_fragment_neutralized,6528
+step3_canonical_nonempty,6528
+step4_unique_samples,4030
+step5_not_exact_project2_benchmark,2997
+step6_property_pass,874
+step7_after_pains_policy,874
+step8_similarity_scored,874
+step9_tanimoto_lt_cutoff,113
+step10_optional_activity_scored,0

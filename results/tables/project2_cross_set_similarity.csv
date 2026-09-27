@@ -1,0 +1,4 @@
+query_group,reference_group,n_query,n_reference,exact_smiles_overlap,nearest_cross_set_tanimoto_median,fraction_cross_set_tanimoto_ge_0_5,fraction_cross_set_tanimoto_ge_0_7,max_cross_set_tanimoto
+generated_survivors,project2_interesting_top20,113,20,0,0.18556701030927836,0.0,0.0,0.3380281690140845
+generated_survivors,project2_filtered_top50,113,50,0,0.21153846153846154,0.0,0.0,0.4722222222222222
+generated_survivors,project2_random_library,113,1000,0,0.25,0.0,0.0,0.4074074074074074

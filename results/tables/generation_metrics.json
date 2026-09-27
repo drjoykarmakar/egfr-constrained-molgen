@@ -1,0 +1,41 @@
+{
+  "chemistry": {
+    "pains_rate_pct_among_valid_unique": 5.905707196029777
+  },
+  "demo_mode": false,
+  "funnel_counts": {
+    "pains_flagged_at_step7": 59,
+    "sampled_raw": 10000,
+    "step10_optional_activity_scored": 0,
+    "step1_valid_parse_sanitize": 6528,
+    "step2_parent_fragment_neutralized": 6528,
+    "step3_canonical_nonempty": 6528,
+    "step4_unique_samples": 4030,
+    "step5_not_exact_project2_benchmark": 2997,
+    "step6_property_pass": 874,
+    "step7_after_pains_policy": 874,
+    "step8_similarity_scored": 874,
+    "step9_tanimoto_lt_cutoff": 113
+  },
+  "generation_quality": {
+    "exact_novelty_pct_vs_training": 75.55831265508685,
+    "survivor_mean_pairwise_tanimoto": 0.1294698108905048,
+    "uniqueness_pct_among_valid": 61.73406862745098,
+    "validity_pct": 65.28
+  },
+  "n_training_active_references": 6279,
+  "novelty_vs_training_actives": {
+    "fraction_tanimoto_ge_0_5": 0.9456575682382135,
+    "fraction_tanimoto_ge_0_7": 0.7615384615384615,
+    "median_nearest_tanimoto": 0.8169872895912058,
+    "n_property_filtered_tanimoto_lt_0_5": 113
+  },
+  "outputs": {
+    "funnel_counts_csv": "/Users/joykarmakar/Documents/GitHub/egfr-constrained-molgen/results/tables/funnel_counts.csv",
+    "survivors_csv": "/Users/joykarmakar/Documents/GitHub/egfr-constrained-molgen/results/lists/survivors.csv",
+    "valid_unique_diagnostics_csv": "/Users/joykarmakar/Documents/GitHub/egfr-constrained-molgen/results/lists/valid_unique_diagnostics.csv"
+  },
+  "reference_note": "Project 2 scaffold-training actives and full benchmark",
+  "sample_file": "/Users/joykarmakar/Documents/GitHub/egfr-constrained-molgen/results/lists/generated_samples_full.csv",
+  "sample_file_sha256": "6486be1b712be2267cabad22d7b0b70f2f7503d8a635ee367264b4a3a9e65980"
+}

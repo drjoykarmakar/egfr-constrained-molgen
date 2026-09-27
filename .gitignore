@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments / editors
+.venv/
+venv/
+.env
+.DS_Store
+.idea/
+.vscode/
+
+# Training artifacts
+*.pt
+*.pth
+*.ckpt
+results/models/
+
+# Full generated samples and large local data snapshots
+results/lists/generated_samples_full.csv
+results/lists/generated_samples_full.smi
+results/lists/generated_samples_full.txt
+data/raw/*.csv
+data/raw/*.tsv
+data/raw/*.smi
+data/raw/*.smiles
+data/processed/*.csv
+data/processed/*.tsv
+
+# Keep provenance and directory placeholders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/raw/*.json
+!data/processed/*.json
+
+# Local Project 2 checkout is external provenance, not vendored here
+egfr-virtual-screen/
+results/lists/generated_samples_demo.csv
+results/lists/valid_unique_diagnostics.csv
+results/lists/demo_valid_unique_diagnostics.csv
+results/lists/demo_survivors.csv
+results/tables/demo_*.csv
+results/tables/demo_*.json

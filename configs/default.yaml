@@ -1,0 +1,96 @@
+project:
+  name: egfr-constrained-molgen
+  seed: 2026
+  python: '3.11'
+provenance:
+  project2:
+    repo_url: https://github.com/drjoykarmakar/egfr-virtual-screen
+    release_tag: v1.0.0
+    local_root: ../egfr-virtual-screen
+    processed_table: data/processed/egfr_activity_classification.csv
+    scaffold_assignments: results/tables/scaffold_split_assignments.csv
+    chembl_manifest: data/raw/egfr_chembl37_activities.manifest.json
+    expected_chembl_release: ChEMBL_37
+    expected_target_chembl_id: CHEMBL203
+    expected_activity_cutoff_pactivity: 6.0
+training_data:
+  split: train
+  active_label: 1
+  output_smiles: data/processed/generation_training_actives.csv
+  heldout_test_actives: data/processed/heldout_scaffold_test_actives.csv
+  benchmark_smiles: data/processed/project2_benchmark_smiles.csv
+  manifest: data/processed/generation_training_manifest.json
+cleaning:
+  parent_fragment: true
+  neutralize: true
+  canonical_isomeric_smiles: true
+vocab:
+  tokenizer: character
+  pad_token: <pad>
+  bos_token: <bos>
+  eos_token: <eos>
+  unk_token: <unk>
+split:
+  validation_fraction: 0.1
+  seed: 2026
+generator:
+  model: smiles_lstm
+  embedding_dim: 128
+  hidden_dim: 256
+  num_layers: 2
+  dropout: 0.2
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 50
+  early_stopping_patience: 5
+  gradient_clip_norm: 1.0
+  device: cpu
+  seed: 2026
+  checkpoint_path: results/generator.pt
+  demo_checkpoint_path: results/demo_generator.pt
+  vocab_path: results/vocab.json
+  training_history: results/tables/generator_training_history.csv
+  training_summary: results/tables/generator_training_summary.json
+  demo_training_history: results/tables/demo_generator_training_history.csv
+  demo_training_summary: results/tables/demo_generator_training_summary.json
+sampling:
+  n_samples: 10000
+  demo_n_samples: 128
+  max_length: 160
+  temperature: 1.0
+  top_k: 40
+  top_p: 0.95
+  seed: 2026
+  output_csv: results/lists/generated_samples_full.csv
+  manifest: results/tables/sampling_manifest.json
+  demo_output_csv: results/lists/generated_samples_demo.csv
+  demo_manifest: results/tables/demo_sampling_manifest.json
+  batch_size: 256
+filters:
+  mw_min: 200.0
+  mw_max: 600.0
+  clogp_min: -1.0
+  clogp_max: 5.0
+  qed_min: 0.4
+  pains_action: flag_only
+  nearest_training_active:
+    radius: 2
+    n_bits: 2048
+    use_chirality: true
+    interesting_max_tanimoto: 0.5
+optional_project2_scorer:
+  enabled: false
+  model_path: ../egfr-virtual-screen/results/models/scaffold_random_forest.pkl
+  score_column: project2_active_probability
+  note: Model score only; not experimental potency.
+comparison:
+  project2_external_library: ../egfr-virtual-screen/data/raw/screening_library.smi
+  project2_interesting_top20: ../egfr-virtual-screen/results/lists/top20_interesting.csv
+  project2_filtered_top50: ../egfr-virtual-screen/results/lists/top50_filtered.csv
+  random_library_sample_size: 1000
+  seed: 2026
+paths:
+  results_tables: results/tables
+  results_figures: results/figures
+  results_lists: results/lists
